@@ -10,7 +10,7 @@ export const Home = () => {
             loop="true"
             autoplay="autoplay"
             muted
-            className="relative h-[80vh] z-10 brightness-95"
+            className="relative h-[80vh] w-full z-10 brightness-95"
           >
             <source
               src="https://d1iyh67kzf6t3o.cloudfront.net/images/2020/RA4.mp4"
@@ -44,18 +44,37 @@ export const Home = () => {
             <h1 className="font-primary font-bold text-xl lg:text-2xl mb-2">
               Recommended Videos
             </h1>
-            <div className="flex gap-12">
+            <div className="flex gap-12 m-2">
               <ReactPlayer
-                className=""
+                style={{
+                  aspectRatio: 1.7,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+                width="50%"
+                height="100%"
                 controls="true"
                 url="https://www.youtube.com/watch?v=1ZYbU82GVz4&t=4s"
               />
               <ReactPlayer
-                className=""
+                style={{
+                  aspectRatio: 1.7,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+                width="50%"
+                height="100%"
                 controls="true"
                 url="https://www.youtube.com/watch?v=T8yEdNx4dB0&t=34s"
               />
               <ReactPlayer
+                style={{
+                  aspectRatio: 1.7,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+                width="50%"
+                height="100%"
                 className=""
                 controls="true"
                 url="https://www.youtube.com/watch?v=aIIEI33EUqI"
