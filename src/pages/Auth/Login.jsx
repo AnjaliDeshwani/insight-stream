@@ -33,7 +33,7 @@ export const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={loginCred.email}
               onChange={(e) =>
                 setLoginCred({ ...loginCred, email: e.target.value })
@@ -44,7 +44,7 @@ export const Login = () => {
             <input
               type="password"
               placeholder="Password"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={loginCred.password}
               onChange={(e) =>
                 setLoginCred({ ...loginCred, password: e.target.value })

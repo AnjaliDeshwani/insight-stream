@@ -39,7 +39,7 @@ export const Signup = () => {
             <input
               type="text"
               placeholder="First Name"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={signUpForm.firstName}
               onChange={(e) =>
                 setSignUpForm({
@@ -53,7 +53,7 @@ export const Signup = () => {
             <input
               type="text"
               placeholder="Last Name"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={signUpForm.lastName}
               onChange={(e) =>
                 setSignUpForm({ ...signUpForm, lastName: e.target.value })
@@ -64,7 +64,7 @@ export const Signup = () => {
             <input
               type="email"
               placeholder="Email"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={signUpForm.email}
               onChange={(e) =>
                 setSignUpForm({ ...signUpForm, email: e.target.value })
@@ -75,7 +75,7 @@ export const Signup = () => {
             <input
               type="password"
               placeholder="Password"
-              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md"
+              className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-sky-600 rounded-md text-slate-900"
               value={signUpForm.password}
               onChange={(e) =>
                 setSignUpForm({
