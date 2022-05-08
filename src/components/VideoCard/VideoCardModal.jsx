@@ -3,7 +3,7 @@ export const VideoCardModal = ({ modalRef }) => {
   return (
     <div
       ref={modalRef}
-      className="absolute top-48 left-40 z-30 flex flex-col gap-3 bg-slate-700 py-4 w-60 rounded-sm"
+      className="absolute top-16 left-8 z-30 flex flex-col gap-3 bg-slate-700 py-4 w-60 rounded-sm"
     >
       <div className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1">
         <span>

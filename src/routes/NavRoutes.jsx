@@ -10,6 +10,8 @@ import {
   Playlist,
   WatchLater,
   Profile,
+  SingleVideo,
+  ErrorPage,
 } from "../pages";
 
 export const NavRoutes = () => {
@@ -26,6 +28,8 @@ export const NavRoutes = () => {
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/watchLater" element={<WatchLater />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/video/:videoId" element={<SingleVideo />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );

@@ -10,18 +10,6 @@ export const Explore = () => {
         {videos.map((video) => (
           <VideoCard video={video} key={video._id} />
         ))}
-        {videos.map((video) => (
-          <VideoCard video={video} key={video._id} />
-        ))}
-        {videos.map((video) => (
-          <VideoCard video={video} key={video._id} />
-        ))}
-        {videos.map((video) => (
-          <VideoCard video={video} key={video._id} />
-        ))}
-        {videos.map((video) => (
-          <VideoCard video={video} key={video._id} />
-        ))}
       </div>
     </div>
   );
