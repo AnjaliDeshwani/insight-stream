@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
+import { useAuth } from "../../context/auth-context";
 
 export const Home = () => {
+  const { token } = useAuth();
   return (
     <>
       <section className="realtive px-4 py-8 text-white ">
@@ -33,7 +35,7 @@ export const Home = () => {
               </span>
             </p>
             <Link
-              to="/login"
+              to={`${token ? "explore" : "login"}`}
               className="inline-block bg-white mt-2 md:mt-5 md:px-8 px-4 py-2 text-sky-500 font-bold font-primary uppercase rounded-full tracking-wide self-baseline hover:bg-sky-500 hover:text-white"
             >
               Start Now
