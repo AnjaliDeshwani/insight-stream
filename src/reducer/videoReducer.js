@@ -13,6 +13,16 @@ export const videoReducer = (videoState, action) => {
 
     case ACTION_TYPE.FILTER_CATEGORY:
       return { ...videoState, selectedCategory: action.payload.categoryName };
+
+    case ACTION_TYPE.ADD_TO_HISTORY:
+      return { ...videoState, history: action.payload.history };
+
+    case ACTION_TYPE.ADD_TO_LIKES:
+      return { ...videoState, likes: action.payload.likes };
+
+    case ACTION_TYPE.ADD_TO_WATCH_LATER:
+      return { ...videoState, watchlater: action.payload.watchlater };
+
     default:
       return videoState;
   }

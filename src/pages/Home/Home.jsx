@@ -77,7 +77,6 @@ export const Home = () => {
                 }}
                 width="50%"
                 height="100%"
-                className=""
                 controls="true"
                 url="https://www.youtube.com/watch?v=aIIEI33EUqI"
               />
