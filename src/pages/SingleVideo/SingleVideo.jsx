@@ -28,7 +28,7 @@ export const SingleVideo = () => {
   const inWatchLater = isInWatchLater(_id, videoState);
 
   useEffect(() => {
-    saveToHistoryService(video, token, videoDispatch);
+    if (token) saveToHistoryService(video, token, videoDispatch);
   }, [video, token, videoDispatch]);
 
   const likeHandler = () => {
@@ -38,10 +38,11 @@ export const SingleVideo = () => {
     } else navigate("/login");
   };
   const watchLaterHandler = (e) => {
-    //e.stopPropagation();
-    inWatchLater
-      ? removeFromWatchLaterService(_id, token, videoDispatch)
-      : addToWatchLaterService(video, token, videoDispatch);
+    if (token) {
+      inWatchLater
+        ? removeFromWatchLaterService(_id, token, videoDispatch)
+        : addToWatchLaterService(video, token, videoDispatch);
+    } else navigate("/login");
   };
   return (
     <div className="w-[80%] mx-auto p-6">
