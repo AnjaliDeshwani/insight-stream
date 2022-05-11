@@ -10,8 +10,6 @@ export const removeFromHistoryService = async (id, token, videoDispatch) => {
       type: ACTION_TYPE.ADD_TO_HISTORY,
       payload: { history: response.data.history },
     });
-
-    console.log(response);
   } catch (error) {
     console.error(error);
   }

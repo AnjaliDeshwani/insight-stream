@@ -28,8 +28,8 @@ export const SingleVideo = () => {
   const inWatchLater = isInWatchLater(_id, videoState);
 
   useEffect(() => {
-    saveToHistoryService(video, token);
-  }, [video, token]);
+    saveToHistoryService(video, token, videoDispatch);
+  }, [video, token, videoDispatch]);
 
   const likeHandler = () => {
     if (token) {

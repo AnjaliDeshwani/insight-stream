@@ -10,8 +10,6 @@ export const removeFromWatchLaterService = async (id, token, videoDispatch) => {
       type: ACTION_TYPE.ADD_TO_WATCH_LATER,
       payload: { watchlater: response.data.watchlater },
     });
-
-    console.log(response);
   } catch (error) {
     console.error(error);
   }

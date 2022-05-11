@@ -8,7 +8,6 @@ export const addToWatchLaterService = async (video, token, videoDispatch) => {
       { video },
       { headers: { authorization: token } }
     );
-    console.log(response);
     videoDispatch({
       type: ACTION_TYPE.ADD_TO_WATCH_LATER,
       payload: { watchlater: response.data.watchlater },

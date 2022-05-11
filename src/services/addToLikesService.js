@@ -8,7 +8,6 @@ export const addToLikesService = async (video, token, videoDispatch) => {
       { video },
       { headers: { authorization: token } }
     );
-    console.log(response);
     videoDispatch({
       type: ACTION_TYPE.ADD_TO_LIKES,
       payload: { likes: response.data.likes },

@@ -10,8 +10,7 @@ export const getHistoryService = async (videoDispatch, token) => {
       type: ACTION_TYPE.ADD_TO_HISTORY,
       payload: { history: response.data.history },
     });
-    console.log("get", response);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };

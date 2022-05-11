@@ -10,8 +10,6 @@ export const removeFromLikesService = async (id, token, videoDispatch) => {
       type: ACTION_TYPE.ADD_TO_LIKES,
       payload: { likes: response.data.likes },
     });
-
-    console.log(response);
   } catch (error) {
     console.error(error);
   }

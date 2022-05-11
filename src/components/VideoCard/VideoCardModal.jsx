@@ -16,9 +16,6 @@ export const VideoCardModal = ({ modalRef, video, setShowModal, from }) => {
   const inWatchLater = isInWatchLater(id, videoState);
   const isLiked = isInLikedVideos(id, videoState);
 
-  console.log(isLiked, inWatchLater);
-  console.log("from", from);
-
   const watchLaterHandler = (e) => {
     e.stopPropagation();
     inWatchLater

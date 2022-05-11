@@ -6,7 +6,6 @@ export const getLikedVideosService = async (video, token, videoDispatch) => {
     const response = await axios.get("/api/user/likes", {
       headers: { authorization: token },
     });
-    console.log(response);
     videoDispatch({
       type: ACTION_TYPE.ADD_TO_LIKES,
       payload: { likes: response.data.likes },

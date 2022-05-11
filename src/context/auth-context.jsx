@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
         setAuthError("");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setAuthError("The credentials you entered are invalid");
     }
   };
@@ -63,7 +63,7 @@ const AuthProvider = ({ children }) => {
         setAuthError("");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setAuthError("Email already exists");
     }
   };
