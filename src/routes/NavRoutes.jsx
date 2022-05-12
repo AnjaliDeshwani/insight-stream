@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
+import { PrivateRoute } from "./PrivateRoute";
 import {
   Login,
   Signup,
@@ -23,13 +24,48 @@ export const NavRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/likedVideos" element={<LikedVideos />} />
-        <Route path="/playlist" element={<Playlist />} />
-        <Route path="/watchLater" element={<WatchLater />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="/video/:videoId" element={<SingleVideo />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route
+          path="/history"
+          element={
+            <PrivateRoute>
+              <History />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/likedVideos"
+          element={
+            <PrivateRoute>
+              <LikedVideos />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/playlist"
+          element={
+            <PrivateRoute>
+              <Playlist />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/watchLater"
+          element={
+            <PrivateRoute>
+              <WatchLater />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useOnClickOutsideModal } from "../../hooks/useOnClickOutsideModal";
 import { VideoCardModal } from "./VideoCardModal";
 
-export const VideoCard = ({ video }) => {
+export const VideoCard = ({ video, from }) => {
   const navigate = useNavigate();
   const { _id, title, channelName, dateOfUpload } = video;
 
@@ -41,7 +41,14 @@ export const VideoCard = ({ video }) => {
         <div className="text-sm text-gray-300">{channelName}</div>
         <div className="text-sm text-gray-300">{dateOfUpload}</div>
       </div>
-      {showModal && <VideoCardModal modalRef={modalRef} />}
+      {showModal && (
+        <VideoCardModal
+          modalRef={modalRef}
+          video={video}
+          setShowModal={setShowModal}
+          from={from}
+        />
+      )}
     </div>
   );
 };

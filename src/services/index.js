@@ -1,2 +1,11 @@
 export { getCategoriesService } from "./getCategoriesService";
 export { getVideosService } from "./getVideosService";
+export { saveToHistoryService } from "./saveToHistoryService";
+export { getHistoryService } from "./getHistoryService";
+export { removeFromHistoryService } from "./removeFromHistoryService";
+export { addToLikesService } from "./addToLikesService";
+export { removeFromLikesService } from "./removeFromLikesService";
+export { getLikedVideosService } from "./getLikedVideosService";
+export { addToWatchLaterService } from "./addToWatchLaterService";
+export { getWatchLaterService } from "./getWatchLaterService";
+export { removeFromWatchLaterService } from "./removeFromWatchLaterService";

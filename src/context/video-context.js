@@ -8,6 +8,9 @@ const initialState = {
   categories: [],
   videos: [],
   selectedCategory: "",
+  history: [],
+  likes: [],
+  watchlater: [],
 };
 const VideoProvider = ({ children }) => {
   const [videoState, videoDispatch] = useReducer(videoReducer, initialState);
