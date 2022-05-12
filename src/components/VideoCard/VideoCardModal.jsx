@@ -1,4 +1,4 @@
-import { ThumbUp, PlaylistAdd, WatchLater } from "@mui/icons-material";
+import { ThumbUp, PlaylistAdd, WatchLater, Delete } from "@mui/icons-material";
 import { useVideo } from "../../context/video-context";
 import { useAuth } from "../../context/auth-context";
 import { isInLikedVideos, isInWatchLater } from "../../utils";
@@ -86,7 +86,7 @@ export const VideoCardModal = ({ modalRef, video, setShowModal, from }) => {
           onClick={historyHandler}
         >
           <span>
-            <ThumbUp className="h-6 w-6" />
+            <Delete className="h-6 w-6" />
           </span>
           <span>Removed from history</span>
         </div>
