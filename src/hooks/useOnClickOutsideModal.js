@@ -12,5 +12,5 @@ export const useOnClickOutsideModal = (modalRef, toggleRef, callback) => {
     };
     window.addEventListener("mousedown", clickHandler);
     return () => window.removeEventListener("mousedown", clickHandler);
-  }, [modalRef, callback]);
+  }, [modalRef, toggleRef, callback]);
 };
