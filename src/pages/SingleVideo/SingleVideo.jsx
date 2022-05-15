@@ -1,6 +1,6 @@
 import ReactPlayer from "react-player";
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { PlaylistAdd, ThumbUp, WatchLater } from "@mui/icons-material/";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
@@ -14,11 +14,14 @@ import {
   removeFromWatchLaterService,
 } from "../../services";
 import { isInLikedVideos, isInWatchLater } from "../../utils";
+import { SavePlaylistModal } from "../../components";
 
 export const SingleVideo = () => {
   const { videoId } = useParams();
   const { videoState, videoDispatch } = useVideo();
   const { token } = useAuth();
+  const [saveToPlaylistModal, setSaveToPlaylistModal] = useState(false);
+
   const navigate = useNavigate();
 
   const video = videoState.videos.find((video) => video._id === videoId);
@@ -44,6 +47,11 @@ export const SingleVideo = () => {
         : addToWatchLaterService(video, token, videoDispatch);
     } else navigate("/login");
   };
+
+  const playlistHandler = (e) => {
+    setSaveToPlaylistModal(true);
+  };
+
   return (
     <div className="w-[80%] mx-auto p-6">
       <div className="video">
@@ -90,7 +98,7 @@ export const SingleVideo = () => {
             </span>
             <span>Watch Later</span>
           </div>
-          <div className="flex gap-1 cursor-pointer">
+          <div className="flex gap-1 cursor-pointer" onClick={playlistHandler}>
             <span>
               <PlaylistAdd className="h-6 w-6" />
             </span>
@@ -103,6 +111,12 @@ export const SingleVideo = () => {
         <div className="font-semibold text-lg">{channelName}</div>
         <div>{description}</div>
       </div>
+      {saveToPlaylistModal && (
+        <SavePlaylistModal
+          setSaveToPlaylistModal={setSaveToPlaylistModal}
+          video={video}
+        />
+      )}
     </div>
   );
 };

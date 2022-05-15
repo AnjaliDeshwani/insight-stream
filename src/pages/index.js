@@ -9,3 +9,4 @@ export { WatchLater } from "./WatchLater/WatchLater";
 export { Profile } from "./Profile/Profile";
 export { SingleVideo } from "./SingleVideo/SingleVideo";
 export { ErrorPage } from "./ErrorPage/ErrorPage";
+export { PlaylistVideos } from "./Playlist/PlaylistVideos";

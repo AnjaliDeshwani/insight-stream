@@ -13,6 +13,7 @@ import {
   Profile,
   SingleVideo,
   ErrorPage,
+  PlaylistVideos,
 } from "../pages";
 
 export const NavRoutes = () => {
@@ -63,6 +64,14 @@ export const NavRoutes = () => {
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/playlist/:playlistId"
+          element={
+            <PrivateRoute>
+              <PlaylistVideos />
             </PrivateRoute>
           }
         />

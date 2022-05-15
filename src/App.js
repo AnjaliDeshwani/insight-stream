@@ -4,7 +4,7 @@ import { NavRoutes } from "./routes/NavRoutes";
 
 function App() {
   return (
-    <div className="App text-white">
+    <div className="App text-white ">
       <Header />
       <NavRoutes />
     </div>

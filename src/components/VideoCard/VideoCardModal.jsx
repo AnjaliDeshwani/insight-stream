@@ -9,7 +9,13 @@ import {
   removeFromHistoryService,
 } from "../../services";
 
-export const VideoCardModal = ({ modalRef, video, setShowModal, from }) => {
+export const VideoCardModal = ({
+  modalRef,
+  video,
+  setShowModal,
+  setSaveToPlaylistModal,
+  from,
+}) => {
   const { videoState, videoDispatch } = useVideo();
   const { token } = useAuth();
   const { _id: id } = video;
@@ -36,10 +42,16 @@ export const VideoCardModal = ({ modalRef, video, setShowModal, from }) => {
     setShowModal(false);
   };
 
+  const playlistHandler = (e) => {
+    e.stopPropagation();
+    setSaveToPlaylistModal(true);
+    setShowModal(false);
+  };
+
   return (
     <div
       ref={modalRef}
-      className="absolute top-16 left-8 z-30 flex flex-col gap-3 bg-slate-700 py-4 w-60 rounded-sm"
+      className="absolute top-16 left-6 z-30 flex flex-col gap-3 bg-slate-700 py-4 w-60 rounded-sm"
     >
       {inWatchLater ? (
         <div
@@ -63,7 +75,10 @@ export const VideoCardModal = ({ modalRef, video, setShowModal, from }) => {
         </div>
       )}
 
-      <div className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1">
+      <div
+        className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+        onClick={playlistHandler}
+      >
         <span>
           <PlaylistAdd className="h-6 w-6" />
         </span>

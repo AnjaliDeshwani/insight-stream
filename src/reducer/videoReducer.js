@@ -23,6 +23,11 @@ export const videoReducer = (videoState, action) => {
     case ACTION_TYPE.ADD_TO_WATCH_LATER:
       return { ...videoState, watchlater: action.payload.watchlater };
 
+    case ACTION_TYPE.ADD_TO_PLAYLISTS:
+      return { ...videoState, playlists: action.payload.playlist };
+
+    case ACTION_TYPE.ADD_VIDEO_TO_PLAYLIST:
+      return { ...videoState, playlistVideos: action.payload.playlistVideos };
     default:
       return videoState;
   }
