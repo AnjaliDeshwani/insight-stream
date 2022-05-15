@@ -25,7 +25,7 @@ export const Header = () => {
         <div className="ml-auto ">
           <ul className="flex items-center lg:space-x-8 font-primary font-semibold text-white ">
             <li className="">
-              <Link to="/home" className="px-4 py-2">
+              <Link to="/" className="px-4 py-2">
                 <LightMode className="h-8" />
               </Link>
             </li>
