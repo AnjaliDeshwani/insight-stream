@@ -13,7 +13,7 @@ export const Filter = ({ categoryName }) => {
 
   return (
     <div
-      className={`py-1 px-3 rounded-lg bg-slate-50 text-slate-900 cursor-pointer hover:bg-sky-400 self-baseline ${
+      className={`py-1 px-3 rounded-lg bg-slate-900 dark:bg-slate-50 dark:text-slate-900 text-slate-50 cursor-pointer hover:bg-sky-400 self-baseline ${
         isActive(categoryName) ? "bg-sky-400" : ""
       }`}
       onClick={() =>

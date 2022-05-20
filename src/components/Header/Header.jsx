@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuIcon } from "@heroicons/react/outline";
-import { LightMode } from "@mui/icons-material";
+import { LightMode, DarkMode } from "@mui/icons-material";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { useAuth } from "../../context/auth-context";
+import { useTheme } from "../../context/theme-context";
+
 export const Header = () => {
   const [showNav, setShowNav] = useState(false);
   const toggleNav = () => {
@@ -11,23 +13,31 @@ export const Header = () => {
   };
   const { token } = useAuth();
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-      <header className="fixed inset-0 h-16 flex  items-center  px-3 bg-slate-700 md:flex-grow z-30">
+      <header className="fixed inset-0 h-16 flex  items-center  px-3 md:flex-grow z-30 bg-stone-100 dark:bg-slate-700">
         <div className="flex items-center">
           <button onClick={toggleNav}>
-            <MenuIcon className="h-8 border py-1 px-3 mr-4 text-white font-bold md:hidden" />
+            <MenuIcon className="h-8 border py-1 px-3 mr-4  font-bold md:hidden" />
           </button>
           <Link to="/" className="flex items-center">
-            <div className="font-bold text-xl text-sky-400">Insight Stream</div>
+            <div className="font-bold text-2xl md:tracking-wide text-sky-400">
+              Insight Stream
+            </div>
           </Link>
         </div>
         <div className="ml-auto ">
-          <ul className="flex items-center lg:space-x-8 font-primary font-semibold text-white ">
+          <ul className="flex items-center lg:space-x-8 font-primary font-semibold ">
             <li className="">
-              <Link to="/" className="px-4 py-2">
-                <LightMode className="h-8" />
-              </Link>
+              <button className="px-4 py-2" onClick={toggleTheme}>
+                {theme === "dark" ? (
+                  <LightMode className="h-8" />
+                ) : (
+                  <DarkMode className="h-8" />
+                )}
+              </button>
             </li>
             <li className="">
               {token ? (

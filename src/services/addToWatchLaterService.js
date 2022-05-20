@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACTION_TYPE } from "../utils/constants";
+import { ACTION_TYPE, toastHandler } from "../utils/";
 
 export const addToWatchLaterService = async (video, token, videoDispatch) => {
   try {
@@ -12,7 +12,9 @@ export const addToWatchLaterService = async (video, token, videoDispatch) => {
       type: ACTION_TYPE.ADD_TO_WATCH_LATER,
       payload: { watchlater: response.data.watchlater },
     });
+    toastHandler("success", "Added to Watch Later");
   } catch (error) {
+    toastHandler("error", "Something went wrong");
     console.error(error);
   }
 };

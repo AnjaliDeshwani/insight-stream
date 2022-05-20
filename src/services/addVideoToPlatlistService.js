@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACTION_TYPE } from "../utils/constants";
+import { ACTION_TYPE, toastHandler } from "../utils/";
 
 export const addVideoToPlatlistService = async (
   playlistId,
@@ -17,8 +17,9 @@ export const addVideoToPlatlistService = async (
       type: ACTION_TYPE.ADD_VIDEO_TO_PLAYLIST,
       payload: { playlistVideos: response.data.playlist },
     });
-    console.log(response);
+    toastHandler("success", "Added to Playlist");
   } catch (error) {
+    toastHandler("error", "Something went wrong");
     console.error(error);
   }
 };

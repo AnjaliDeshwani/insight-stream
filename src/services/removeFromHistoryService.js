@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACTION_TYPE } from "../utils/constants";
+import { ACTION_TYPE, toastHandler } from "../utils/";
 
 export const removeFromHistoryService = async (id, token, videoDispatch) => {
   try {
@@ -10,7 +10,9 @@ export const removeFromHistoryService = async (id, token, videoDispatch) => {
       type: ACTION_TYPE.ADD_TO_HISTORY,
       payload: { history: response.data.history },
     });
+    toastHandler("warn", "Removed from History");
   } catch (error) {
+    toastHandler("error", "Something went wrong");
     console.error(error);
   }
 };

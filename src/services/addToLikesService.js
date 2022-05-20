@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACTION_TYPE } from "../utils/constants";
+import { ACTION_TYPE } from "../utils/";
 
 export const addToLikesService = async (video, token, videoDispatch) => {
   try {

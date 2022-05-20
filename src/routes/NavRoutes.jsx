@@ -18,7 +18,7 @@ import {
 
 export const NavRoutes = () => {
   return (
-    <div className="md:ml-64 mt-16 min-h-[calc(100vh-4rem)] bg-slate-900 ">
+    <div className="md:ml-64 mt-16 min-h-[calc(100vh-4rem)] bg-white dark:bg-slate-900 ">
       <Routes>
         <Route path="/mock" element={<Mockman />} />
         <Route path="/" element={<Home />} />

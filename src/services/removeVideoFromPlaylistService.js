@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ACTION_TYPE } from "../utils/constants";
+import { ACTION_TYPE, toastHandler } from "../utils/";
 
 export const removeVideoFromPlaylistService = async (
   playlistId,
@@ -18,8 +18,9 @@ export const removeVideoFromPlaylistService = async (
       type: ACTION_TYPE.ADD_VIDEO_TO_PLAYLIST,
       payload: { playlistVideos: response.data.playlist },
     });
-    console.log(response);
+    toastHandler("warn", "Removed from Playlist");
   } catch (error) {
+    toastHandler("error", "Something went wrong");
     console.error(error);
   }
 };

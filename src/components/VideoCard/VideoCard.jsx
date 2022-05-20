@@ -46,8 +46,12 @@ export const VideoCard = ({ video, playlistId, from }) => {
         </div>
 
         <div className="flex justify-between">
-          <div className="text-sm text-gray-300">{channelName}</div>
-          <div className="text-sm text-gray-300">{dateOfUpload}</div>
+          <div className="text-sm text-slate-700 dark:text-gray-300">
+            {channelName}
+          </div>
+          <div className="text-sm text-slate-700 dark:text-gray-300">
+            {dateOfUpload}
+          </div>
         </div>
         {showModal &&
           (from === "playlist" ? (
