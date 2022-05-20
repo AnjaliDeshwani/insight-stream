@@ -13,7 +13,7 @@ export const Sidebar = ({ showNav, toggleNav }) => {
     <nav
       className={`fixed top-16 transform z-30 ${
         !showNav ? " -translate-x-full opacity-0" : " opacity-100"
-      } md:transform-none md:opacity-100 w-64 bg-slate-700 text-white shadow-md h-screen p-61 duration-200`}
+      } md:transform-none md:opacity-100 w-64 bg-stone-100 dark:bg-slate-700 shadow-md h-screen p-61 duration-200`}
     >
       <ul className="mt-8 mx-5 flex flex-col gap-6">
         <li className="flex items-center hover:bg-sky-400 hover:text-black rounded-md font-semibold">

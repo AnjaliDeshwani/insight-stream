@@ -6,7 +6,7 @@ export const Home = () => {
   const { token } = useAuth();
   return (
     <>
-      <section className="realtive px-4 py-8 text-white ">
+      <section className="realtive px-4 py-8 text-black dark:text-white ">
         <div className="mx-10">
           <video
             loop="true"

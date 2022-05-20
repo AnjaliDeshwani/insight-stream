@@ -30,10 +30,10 @@ export const PlaylistModal = ({
   return (
     <div
       ref={modalRef}
-      className="absolute top-44 right-8 z-30 flex flex-col gap-3 bg-slate-700 py-2 w-48 rounded-sm text-red-600"
+      className="absolute top-44 right-8 z-30 flex flex-col gap-3 bg-stone-100 dark:bg-slate-700 py-2 w-48 rounded-sm text-red-600"
     >
       <div
-        className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+        className="flex items-center gap-2 hover:bg-stone-300 dark:hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
         onClick={removePlaylistHandler}
       >
         <span>

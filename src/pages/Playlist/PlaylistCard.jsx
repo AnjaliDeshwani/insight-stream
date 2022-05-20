@@ -29,7 +29,7 @@ export const PlaylistCard = ({ playlist }) => {
               src={`https://i3.ytimg.com/vi/${videos[0]._id}/maxresdefault.jpg`}
               alt="playlist"
             ></img>
-            <div className="absolute top-0 right-0 h-40 w-28 bg-slate-900 bg-opacity-50 flex flex-col items-center justify-center">
+            <div className="absolute top-0 right-0 h-40 w-28 text-white bg-slate-900 bg-opacity-50 flex flex-col items-center justify-center">
               <span>{videos.length}</span>
               <PlaylistPlay className="h-8 w-8" />
             </div>

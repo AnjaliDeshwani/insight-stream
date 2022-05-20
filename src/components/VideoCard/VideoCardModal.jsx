@@ -51,11 +51,11 @@ export const VideoCardModal = ({
   return (
     <div
       ref={modalRef}
-      className="absolute top-16 left-6 z-30 flex flex-col gap-3 bg-slate-700 py-4 w-60 rounded-sm"
+      className="absolute top-16 left-6 z-30 flex flex-col gap-3 bg-stone-100 dark:bg-slate-700 py-4 w-60 rounded-sm"
     >
       {inWatchLater ? (
         <div
-          className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+          className="flex items-center gap-2  hover:bg-stone-300 dark:hover:bg-slate-100 dark:hover:bg-opacity-30 cursor-pointer  px-2 py-1"
           onClick={watchLaterHandler}
         >
           <span>
@@ -65,7 +65,7 @@ export const VideoCardModal = ({
         </div>
       ) : (
         <div
-          className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+          className="flex items-center gap-2 hover:bg-stone-300 dark:hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
           onClick={watchLaterHandler}
         >
           <span>
@@ -76,7 +76,7 @@ export const VideoCardModal = ({
       )}
 
       <div
-        className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+        className="flex items-center gap-2 hover:bg-stone-300 dark:hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
         onClick={playlistHandler}
       >
         <span>
@@ -86,7 +86,7 @@ export const VideoCardModal = ({
       </div>
       {isLiked && (
         <div
-          className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+          className="flex items-center gap-2 hover:bg-stone-300 dark:hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
           onClick={likeHandler}
         >
           <span>
@@ -97,7 +97,7 @@ export const VideoCardModal = ({
       )}
       {from === "history" && (
         <div
-          className="flex items-center gap-2 hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
+          className="flex items-center gap-2 hover:bg-stone-300 dark:hover:bg-slate-100 hover:bg-opacity-30 cursor-pointer  px-2 py-1"
           onClick={historyHandler}
         >
           <span>
