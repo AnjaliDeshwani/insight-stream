@@ -49,7 +49,9 @@ export const SingleVideo = () => {
   };
 
   const playlistHandler = (e) => {
-    setSaveToPlaylistModal(true);
+    if (token) {
+      setSaveToPlaylistModal(true);
+    } else navigate("/login");
   };
 
   return (

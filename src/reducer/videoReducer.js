@@ -28,6 +28,16 @@ export const videoReducer = (videoState, action) => {
 
     case ACTION_TYPE.ADD_VIDEO_TO_PLAYLIST:
       return { ...videoState, playlistVideos: action.payload.playlistVideos };
+
+    case ACTION_TYPE.USER_LOGOUT:
+      return {
+        ...videoState,
+        history: [],
+        likes: [],
+        watchlater: [],
+        playlists: [],
+        playlistVideos: {},
+      };
     default:
       return videoState;
   }
