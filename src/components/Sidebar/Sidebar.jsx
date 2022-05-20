@@ -6,7 +6,7 @@ import {
   History,
   WatchLater,
 } from "@mui/icons-material";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Sidebar = ({ showNav, toggleNav }) => {
   const toggleActive = ({ isActive }) => {
