@@ -23,7 +23,9 @@ export const Header = () => {
             <MenuIcon className="h-8 border py-1 px-3 mr-4  font-bold md:hidden" />
           </button>
           <Link to="/" className="flex items-center">
-            <div className="font-bold text-xl text-sky-400">Insight Stream</div>
+            <div className="font-bold text-2xl md:tracking-wide text-sky-400">
+              Insight Stream
+            </div>
           </Link>
         </div>
         <div className="ml-auto ">

@@ -37,7 +37,7 @@ export const History = () => {
           <h1 className="text-2xl md:text-4xl">There are no videos to show</h1>
           <Link
             to="/explore"
-            className="bg-white mt-2 md:mt-5 md:px-8 px-4 py-2 text-sky-500 text-xl font-bold font-primary uppercase rounded-full tracking-wide hover:bg-sky-500 hover:text-white"
+            className="bg-slate-900 dark:bg-white mt-2 md:mt-5 md:px-8 px-4 py-2 text-sky-500 text-xl font-bold font-primary uppercase rounded-full tracking-wide hover:bg-sky-500 dark:hover:bg-sky-500 hover:text-black"
           >
             Explore Now
           </Link>

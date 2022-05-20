@@ -26,7 +26,7 @@ export const Login = () => {
     <div className="flex flex-col py-12">
       <div className="mx-auto text-center sm:max-w-xl sm:w-full">
         <span className="text-2xl font-light">Login to your Account</span>
-        <div className="mt-4 bg-slate-700 shadow-md rounded-lg text-left">
+        <div className="mt-4 bg-stone-100 dark:bg-slate-700 shadow-md rounded-lg text-left">
           <div className="h-2 bg-sky-400 rounded-t-md"></div>
           <form className="py-6 px-8" onSubmit={onSubmitHandler}>
             <label className="block font-semibold">Email</label>

@@ -12,7 +12,7 @@ export const Home = () => {
             loop="true"
             autoplay="autoplay"
             muted
-            className="relative h-[80vh] w-full z-10 brightness-95"
+            className="relative h-[80vh] w-full z-10 brightness-95 object-cover"
           >
             <source
               src="https://d1iyh67kzf6t3o.cloudfront.net/images/2020/RA4.mp4"
@@ -20,7 +20,7 @@ export const Home = () => {
             ></source>
           </video>
 
-          <div className="absolute z-20 top-[30%] left-[10%] md:left-[40%] py-16 pb-32 flex flex-col ">
+          <div className="absolute z-20 top-[30%] left-[20%] md:left-[40%] py-16 pb-32 flex flex-col lg:w-[40rem] w-64 ">
             <h1 className="font-semibold  font-primary  text-xl lg:text-4xl leading-relaxed ">
               Find your Calm
               <br />
@@ -46,40 +46,46 @@ export const Home = () => {
             <h1 className="font-primary font-bold text-xl lg:text-2xl mb-2">
               Recommended Videos
             </h1>
-            <div className="flex gap-12 m-2">
-              <ReactPlayer
-                style={{
-                  aspectRatio: 1.7,
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                }}
-                width="50%"
-                height="100%"
-                controls="true"
-                url="https://www.youtube.com/watch?v=1ZYbU82GVz4&t=4s"
-              />
-              <ReactPlayer
-                style={{
-                  aspectRatio: 1.7,
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                }}
-                width="50%"
-                height="100%"
-                controls="true"
-                url="https://www.youtube.com/watch?v=T8yEdNx4dB0&t=34s"
-              />
-              <ReactPlayer
-                style={{
-                  aspectRatio: 1.7,
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                }}
-                width="50%"
-                height="100%"
-                controls="true"
-                url="https://www.youtube.com/watch?v=aIIEI33EUqI"
-              />
+            <div className="flex flex-col lg:flex-row gap-12 m-2">
+              <div className="w-full md:w-1/2 ">
+                <ReactPlayer
+                  style={{
+                    aspectRatio: 1.7,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                  width="100%"
+                  height="100%"
+                  controls="true"
+                  url="https://www.youtube.com/watch?v=1ZYbU82GVz4&t=4s"
+                />
+              </div>
+              <div className="w-full md:w-1/2 ">
+                <ReactPlayer
+                  style={{
+                    aspectRatio: 1.7,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                  width="100%"
+                  height="100%"
+                  controls="true"
+                  url="https://www.youtube.com/watch?v=T8yEdNx4dB0&t=34s"
+                />
+              </div>
+              <div className="w-full md:w-1/2 ">
+                <ReactPlayer
+                  style={{
+                    aspectRatio: 1.7,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                  width="100%"
+                  height="100%"
+                  controls="true"
+                  url="https://www.youtube.com/watch?v=aIIEI33EUqI"
+                />
+              </div>
             </div>
           </div>
         </div>

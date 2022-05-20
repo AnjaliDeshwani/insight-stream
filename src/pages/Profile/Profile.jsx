@@ -8,7 +8,7 @@ export const Profile = () => {
         <div className="flex items-center justify-center h-10 bg-sky-400 rounded-t-md font-bold">
           User Profile
         </div>
-        <div className="border-2 border-sky-500 text-white py-3">
+        <div className="border-2 border-sky-500 text-black dark:text-white  py-3">
           <div className="mt-6 px-6 flex flex-col gap-5">
             <div>
               <span className="font-bold">Name: </span>

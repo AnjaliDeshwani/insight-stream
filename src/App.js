@@ -10,7 +10,7 @@ function App() {
   return (
     <div
       className={`App  ${
-        theme === "dark" ? "light text-black" : "dark text-white"
+        theme === "dark" ? "dark text-white" : "light text-black"
       }`}
     >
       <Header />
