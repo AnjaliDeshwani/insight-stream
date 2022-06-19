@@ -3,7 +3,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 import { useVideo } from "../../context/video-context";
 import { ACTION_TYPE } from "../../utils";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 export const SearchBar = () => {
   const { videoDispatch } = useVideo();
