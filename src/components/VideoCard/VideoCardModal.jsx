@@ -61,7 +61,7 @@ export const VideoCardModal = ({
   return (
     <div
       ref={modalRef}
-      className="absolute top-16 left-6 z-30 flex flex-col gap-3 bg-stone-100 dark:bg-slate-700 py-4 w-60 rounded-sm"
+      className="absolute top-16 left-6 z-30 flex flex-col gap-3 bg-stone-100 dark:bg-slate-700 py-4 w-60 rounded-sm shadow-2xl"
     >
       {inWatchLater ? (
         <div
