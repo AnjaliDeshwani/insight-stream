@@ -10,7 +10,6 @@ export const getAllPlaylistService = async (videoDispatch, token) => {
       type: ACTION_TYPE.ADD_TO_PLAYLISTS,
       payload: { playlist: response.data.playlists },
     });
-    console.log(response);
   } catch (error) {
     console.error(error);
   }

@@ -13,6 +13,7 @@ const initialState = {
   watchlater: [],
   playlists: [],
   playlistVideos: {},
+  searchedText: "",
 };
 const VideoProvider = ({ children }) => {
   const [videoState, videoDispatch] = useReducer(videoReducer, initialState);
