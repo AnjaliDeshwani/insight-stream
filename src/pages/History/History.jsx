@@ -2,13 +2,15 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
 import { useVideo } from "../../context/video-context";
-import { getHistoryService } from "../../services";
+import { getHistoryService, clearHistoryService } from "../../services";
 import { VideoCard } from "../../components";
 
 export const History = () => {
   const { token } = useAuth();
   const { videoState, videoDispatch } = useVideo();
   const { history } = videoState;
+
+  const clearHistoryHandler = () => clearHistoryService(videoDispatch, token);
 
   useEffect(() => {
     getHistoryService(videoDispatch, token);
@@ -18,15 +20,23 @@ export const History = () => {
     <div className="flex flex-col p-6 ">
       {history.length ? (
         <div>
-          <div className="flex flex-col">
-            <h2 className="text-2xl font-semibold tracking-wider font-primary">
-              History
-            </h2>
-            <span className="text-sm text-slate-400">
-              {history.length} videos
-            </span>
+          <div className="flex items-center">
+            <div className="flex flex-col">
+              <h2 className="text-2xl font-semibold tracking-wider font-primary">
+                History
+              </h2>
+              <span className="text-sm text-slate-400">
+                {history.length} videos
+              </span>
+            </div>
+            <button
+              className="ml-auto flex items-center gap-3 m-4 border-sky-500 border-2 py-2 px-6 rounded-md hover:bg-sky-600 font-semibold"
+              onClick={clearHistoryHandler}
+            >
+              Clear History
+            </button>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(35rem,1fr))] gap-y-12 mt-7 md:justify-items-center">
+          <div className="grid sm:grid-cols-[repeat(auto-fit,minmax(35rem,1fr))] gap-y-12 mt-7 md:justify-items-center">
             {history.map((video) => (
               <VideoCard video={video} key={video._id} from="history" />
             ))}

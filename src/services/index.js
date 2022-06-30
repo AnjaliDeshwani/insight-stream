@@ -15,3 +15,4 @@ export { addNewPlaylistService } from "./addNewPlaylistService";
 export { getVideosFromPlaylistService } from "./getVideosFromPlaylistService";
 export { removeVideoFromPlaylistService } from "./removeVideoFromPlaylistService";
 export { addVideoToPlatlistService } from "./addVideoToPlatlistService";
+export { clearHistoryService } from "./clearHistoryService";
