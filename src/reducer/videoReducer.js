@@ -38,6 +38,18 @@ export const videoReducer = (videoState, action) => {
         playlists: [],
         playlistVideos: {},
       };
+
+    case ACTION_TYPE.SEARCH:
+      return {
+        ...videoState,
+        searchedText: action.payload.searchedText,
+      };
+
+    case ACTION_TYPE.CLEAR_HISTORY:
+      return {
+        ...videoState,
+        history: [],
+      };
     default:
       return videoState;
   }

@@ -26,7 +26,7 @@ export const WatchLater = () => {
               {watchlater.length} videos
             </span>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(35rem,1fr))] gap-y-12 mt-7 md:justify-items-center">
+          <div className="grid sm:grid-cols-[repeat(auto-fit,minmax(35rem,1fr))] gap-y-12 mt-7 md:justify-items-center">
             {watchlater.map((video) => (
               <VideoCard video={video} key={video._id} />
             ))}
